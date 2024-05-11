@@ -4,21 +4,22 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 public class stepDefination {
 
+    WebDriver driver;
     @Given("I am on Login page")
     public void i_am_on_login_page() {
         WebDriver driver;
         driver=new ChromeDriver();
         driver.get("https://www.saucedemo.com/");
-
     }
-    @And("^I enter the username (.*)$")
+    @And("I enter the username {}")
     public void i_enter_the_username_user_name(String username) {
-
+    driver.findElement(By.id("Username")).sendKeys("Username");
     }
     @And("^I enter password (.*)$")
     public void i_enter_password_pass(String password) {
