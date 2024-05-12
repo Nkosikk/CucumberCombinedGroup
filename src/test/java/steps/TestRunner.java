@@ -1,5 +1,4 @@
-package steps;
+package Steps;
 
 public class TestRunner {
-
 }
