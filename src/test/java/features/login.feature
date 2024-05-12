@@ -4,8 +4,8 @@ Feature: Login
     Given I am on Login page
     And I enter the username <user_name>
     And I enter password <pass>
-    When I click login button
-    Then The home page is displayed
+    And I click login button
+    Then I should see the text "Products"
     Examples:
       | user_name               | pass         |
       | standard_user           | secret_sauce |
