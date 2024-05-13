@@ -4,6 +4,7 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import org.junit.After;
 import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -45,5 +46,11 @@ public class stepDefinition {
         Assert.assertTrue
                 (driver.findElement
                         (By.xpath("//span[contains(@class,'title')]")).getText().contains(productText));
+    }
+
+    @After
+    public void closeBrowser()
+    {
+        driver.quit();
     }
 }
