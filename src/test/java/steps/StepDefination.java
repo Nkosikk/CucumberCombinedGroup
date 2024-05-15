@@ -1,5 +1,6 @@
 package steps;
 
+import io.cucumber.java.After;
 import io.cucumber.java.en.*;
 
 public class StepDefination extends Base {
@@ -26,5 +27,11 @@ public class StepDefination extends Base {
     @Then("The home page is displayed")
     public void the_home_page_is_displayed() {
         homePage.verifyUserIsLoggedIn();
+    }
+
+    @After
+    public void closeBrowser(){
+        driver.quit();
+
     }
 }
