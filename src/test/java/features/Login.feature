@@ -1,4 +1,6 @@
+@Regression,@Login
 Feature: Login
+
 
   Scenario Outline: As a user i want to login and verify that i am logged in successfully
     Given I am on Login page
@@ -9,4 +11,5 @@ Feature: Login
     Examples:
       | user_name     | pass         |
       | standard_user | secret_sauce |
+
 
