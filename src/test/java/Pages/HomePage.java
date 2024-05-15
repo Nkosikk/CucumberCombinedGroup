@@ -21,7 +21,7 @@ public class HomePage {
 
     public void verifyUserIsLoggedIn() {
         new WebDriverWait(driver, Duration.ofSeconds(10)).until(ExpectedConditions.visibilityOf(product_xpath));
-//        product_xpath.isDisplayed();
+        product_xpath.isDisplayed();
         String productText = product_xpath.getText();
         Assert.assertEquals(productText,"Products");
 
