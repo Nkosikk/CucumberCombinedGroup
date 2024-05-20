@@ -23,7 +23,7 @@ public class HomePage {
         new WebDriverWait(driver, Duration.ofSeconds(10)).until(ExpectedConditions.visibilityOf(product_xpath));
         product_xpath.isDisplayed();
         String productText = product_xpath.getText();
-        Assert.assertEquals(productText,"Products");
+        Assert.assertEquals(productText,"ProductsNkoi");
 
     }
 
