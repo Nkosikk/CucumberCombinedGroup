@@ -1,7 +1,11 @@
 package steps;
 
 import io.cucumber.java.After;
+import io.cucumber.java.AfterStep;
+import io.cucumber.java.Scenario;
 import io.cucumber.java.en.*;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 
 public class StepDefination extends Base {
     @Given("I am on Login page")
@@ -27,6 +31,14 @@ public class StepDefination extends Base {
     @Then("The home page is displayed")
     public void the_home_page_is_displayed() {
         homePage.verifyUserIsLoggedIn();
+    }
+
+    @AfterStep
+    public void addScreenshot(Scenario scenario){
+        if (scenario.isFailed()){
+            byte[] screenshot=((TakesScreenshot)driver).getScreenshotAs(OutputType.BYTES);
+            scenario.attach(screenshot,"image/png","image");
+        }
     }
 
     @After
