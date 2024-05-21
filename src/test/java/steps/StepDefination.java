@@ -9,9 +9,7 @@ import org.openqa.selenium.TakesScreenshot;
 
 public class StepDefination extends Base {
     @Given("I am on Login page")
-    public void i_am_on_login_page() {
-
-    }
+    public void i_am_on_login_page() { }
 
     @And("^I enter the username (.*)$")
     public void i_enter_the_username_user_name(String username) {

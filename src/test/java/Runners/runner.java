@@ -1,6 +1,5 @@
 package Runners;
 
-
 import io.cucumber.testng.AbstractTestNGCucumberTests;
 import io.cucumber.testng.CucumberOptions;
 
@@ -11,5 +10,4 @@ import io.cucumber.testng.CucumberOptions;
         plugin = {"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"},
         publish = true
 )
-public class runner extends AbstractTestNGCucumberTests {
-}
+public class runner extends AbstractTestNGCucumberTests { }
